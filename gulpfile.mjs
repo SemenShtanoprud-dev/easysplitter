@@ -91,7 +91,9 @@ export function images() {
 }
 
 export function fonts() {
-  return src(paths.fonts.src).pipe(dest(paths.fonts.dest));
+  return src(paths.fonts.src, { allowEmpty: true }).pipe(
+    dest(paths.fonts.dest),
+  );
 }
 
 export function serve() {
