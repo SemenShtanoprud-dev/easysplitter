@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Swiper
   new Swiper(".testimonials__slider", {
     loop: true,
-    autoHeight: true,
     navigation: {
       prevEl: ".testimonials__btn--prev",
       nextEl: ".testimonials__btn--next",
@@ -44,3 +43,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
