@@ -1,4 +1,5 @@
 import gulp from "gulp";
+import fs from "fs";
 import gulpSass from "gulp-sass";
 import * as sass from "sass";
 import sourcemaps from "gulp-sourcemaps";
@@ -90,10 +91,13 @@ export function images() {
   return src("src/images/**/*", { encoding: false }).pipe(dest("dist/images/"));
 }
 
-export function fonts() {
-  return src(paths.fonts.src, { allowEmpty: true }).pipe(
-    dest(paths.fonts.dest),
-  );
+export function fonts(done) {
+  if (!fs.existsSync("src/fonts")) {
+    done();
+    return;
+  }
+
+  return src(paths.fonts.src).pipe(dest(paths.fonts.dest));
 }
 
 export function serve() {
