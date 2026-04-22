@@ -1,0 +1,116 @@
+@use "../base/vars" as *;
+
+.banner {
+    padding: 0;
+    overflow: hidden;
+    background: $section-bg;
+
+    &__content {
+        display: flex;
+        background: $gradient-main;
+        border-radius: 32px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    &__info {
+        padding: $space-xxxl;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: $space-md;
+        color: $color-white;
+
+        @media (max-width: 768px) {
+            padding: $space-md;
+        }
+    }
+
+    &__title {
+        font-size: $fs-h2;
+        line-height: $lh-tight;
+
+        @media (max-width: 768px) {
+            text-align: center;
+        }
+    }
+
+    &__text {
+        font-size: $fs-text-lg;
+        line-height: $lh-normal;
+
+        @media (max-width: 768px) {
+            font-size: $fs-text;
+            text-align: center;
+        }
+    }
+
+    &__picture {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: scale(1.4);
+
+        @media (max-width: 768px) {
+            transform: none;
+            margin-top: $space-lg;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: $space-md;
+
+        @media (max-width: 768px) {
+            gap: $space-xs;
+            justify-content: center;
+        }
+    }
+
+    &__btn {
+        padding: $space-xs $space-sm;
+        background: $color-white;
+        display: flex;
+        min-width: 180px;
+        align-items: center;
+        gap: $space-xs;
+        border-radius: 8px;
+        color: $color-text-main;
+        font-size: $fs-small;
+        font-weight: 600;
+        line-height: $lh-tight;
+        transition:
+            background 0.3s,
+            color 0.3s;
+
+        @media (max-width: 768px) {
+            min-width: auto;
+            padding: $space-xxs $space-xs;
+            gap: $space-xxs;
+        }
+
+        span {
+            display: block;
+            font-size: $fs-small;
+
+            & > span {
+                display: block;
+                font-size: $fs-text;
+                font-weight: 700;
+            }
+        }
+
+        img {
+            flex-shrink: 0;
+        }
+
+        &:hover {
+            background: $color-primary-hover;
+            color: $color-white;
+        }
+    }
+}

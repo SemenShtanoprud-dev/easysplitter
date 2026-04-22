@@ -1,0 +1,41 @@
+$font-main: "Inter", Arial, sans-serif;
+
+$color-primary: #6c63ff;
+$color-primary-hover: #5a52e0;
+$color-accent: #a855f7;
+$color-text-main: #1f2937;
+$color-text-secondary: #1b1c43;
+$color-white: #ffffff;
+$color-bg: #f5f7fb;
+$color-border: #a5acdc;
+$section-bg: #ecf2ff;
+
+$gradient-main: linear-gradient(90deg, #6c63ff 0%, #a855f7 100%);
+$gradient-soft: linear-gradient(0deg, #eaafff 0%, #6475f0 100%);
+
+$shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+$fs-hero: 4.375rem;
+$fs-h1: 2.5rem;
+$fs-h2: 2rem;
+$fs-h3: 1.5rem;
+$fs-text-lg: 1.125rem;
+$fs-text: 1rem;
+$fs-small: 0.875rem;
+
+$lh-tight: 1.2;
+$lh-normal: 1.5;
+$lh-loose: 1.7;
+
+$container-width: 1200px;
+$container-padding: 20px;
+
+$space-xxs: 4px;
+$space-xs: 8px;
+$space-sm: 16px;
+$space-md: 24px;
+$space-lg: 32px;
+$space-xl: 48px;
+$space-xxl: 64px;
+$space-xxxl: 96px;

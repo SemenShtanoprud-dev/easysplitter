@@ -1,0 +1,109 @@
+@use "../base/vars" as *;
+
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: $space-md;
+        min-height: 72px;
+    }
+
+    &__logo {
+        color: $color-white;
+        font-size: $fs-h3;
+        font-weight: 600;
+        position: relative;
+        z-index: 1001;
+    }
+
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $space-md;
+
+        @media (max-width: 768px) {
+            position: fixed;
+            inset: 0;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: $space-lg;
+            background: rgba(#1b1c43, 0.97);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+
+            &.is-open {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+    }
+
+    &__link {
+        color: $color-white;
+        font-size: $fs-text;
+        opacity: 0.85;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            font-size: $fs-h3;
+            opacity: 1;
+        }
+    }
+
+    &__burger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 40px;
+        height: 40px;
+        padding: $space-xs;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 1001;
+
+        @media (max-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__burger-line {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: $color-white;
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform-origin: center;
+    }
+
+    &__burger[aria-expanded="true"] {
+        .header__burger-line:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .header__burger-line:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        .header__burger-line:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+    }
+}

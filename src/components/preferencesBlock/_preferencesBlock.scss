@@ -1,0 +1,52 @@
+@use "../../scss/base/vars" as *;
+
+.preferences-block {
+    display: flex;
+    align-items: center;
+    gap: $space-lg;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    &__icon {
+        width: 100px;
+        height: 100px;
+        min-width: 100px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $color-bg;
+        flex-shrink: 0;
+
+        @media (max-width: 1200px) {
+            width: 80px;
+            height: 80px;
+            min-width: 80px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: $space-xs;
+
+        @media (max-width: 768px) {
+            align-items: center;
+        }
+    }
+
+    &__title {
+        font-size: $fs-h3;
+        font-weight: 700;
+        line-height: $lh-tight;
+        color: $color-text-main;
+    }
+
+    &__description {
+        font-size: $fs-text;
+        line-height: $lh-normal;
+        color: $color-text-secondary;
+    }
+}

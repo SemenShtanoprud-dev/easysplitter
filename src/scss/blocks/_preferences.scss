@@ -1,0 +1,71 @@
+@use "../base/vars" as *;
+
+.preferences {
+    background: $section-bg;
+
+    &__title {
+        font-size: $fs-h2;
+        color: $color-text-secondary;
+        margin-bottom: $space-md;
+
+        @media (max-width: 992px) {
+            text-align: center;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            margin-top: $space-xs;
+            width: 60px;
+            height: 5px;
+            border-radius: 10px;
+            background: $gradient-main;
+
+            @media (max-width: 992px) {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: $space-xxl;
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+        }
+    }
+
+    &__image {
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            max-width: 500px;
+            display: block;
+
+            @media (max-width: 1200px) {
+                max-width: 400px;
+            }
+
+            @media (max-width: 992px) {
+                max-width: 80%;
+            }
+        }
+    }
+
+    &__blocks {
+        display: flex;
+        flex-direction: column;
+        gap: $space-lg;
+        margin-top: $space-xxl;
+
+        @media (max-width: 768px) {
+            margin-top: $space-md;
+        }
+    }
+}

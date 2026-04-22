@@ -1,0 +1,124 @@
+@use "../base/vars" as *;
+
+.footer {
+    padding: $space-xl 0;
+    background: $section-bg;
+
+    @media (max-width: 768px) {
+        padding: $space-lg 0;
+    }
+
+    &__top {
+        margin-bottom: $space-lg;
+
+        @media (max-width: 768px) {
+            margin-bottom: $space-sm;
+        }
+    }
+
+    &__brand {
+        display: flex;
+        flex-direction: column;
+        gap: $space-sm;
+
+        @media (max-width: 768px) {
+            text-align: center;
+            gap: $space-xs;
+        }
+    }
+
+    &__logo {
+        font-size: $fs-h3;
+        font-weight: 600;
+        line-height: $lh-tight;
+        background: $gradient-main;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+
+        @media (max-width: 768px) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__copy {
+        font-size: $fs-small;
+        color: $color-text-secondary;
+    }
+
+    &__divider {
+        height: 1px;
+        background: $color-border;
+        margin: $space-lg 0;
+
+        @media (max-width: 768px) {
+            margin: $space-sm 0;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: $space-md;
+        flex-wrap: wrap;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: $space-xs;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        gap: $space-sm;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: $color-white;
+        box-shadow: $shadow-sm;
+        transition: transform 0.2s, box-shadow 0.2s;
+
+        img {
+            width: 18px;
+            height: 18px;
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: $shadow-md;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        gap: $space-lg;
+        flex-wrap: wrap;
+
+        @media (max-width: 768px) {
+            gap: $space-sm;
+        }
+    }
+
+    &__contact {
+        font-size: $fs-small;
+        color: $color-text-main;
+        display: flex;
+        align-items: center;
+        gap: $space-xs;
+        transition: color 0.2s;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}

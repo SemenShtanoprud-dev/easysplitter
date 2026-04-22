@@ -1,0 +1,29 @@
+@use "./vars" as *;
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: $font-main;
+    font-size: $fs-text;
+    color: $color-text-main;
+    background: $color-bg;
+    line-height: $lh-normal;
+}
+
+.container {
+    max-width: $container-width;
+    padding: 0 $container-padding;
+    margin: 0 auto;
+}
+
+section {
+    padding: $space-xxxl 0;
+    @media (max-width: 992px) {
+        padding: $space-xxl 0;
+    }
+    @media (max-width: 768px) {
+        padding: $space-xl 0;
+    }
+}

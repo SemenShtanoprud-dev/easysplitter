@@ -1,0 +1,33 @@
+@use "../base/vars" as *;
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: $fs-text;
+    font-weight: 500;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: $shadow-md;
+    }
+
+    &--white {
+        background: $color-white;
+        color: $color-accent;
+    }
+
+    &--transparent {
+        background: transparent;
+        color: $color-white;
+        border: 2px solid $color-white;
+
+        &:hover {
+            background: $color-white;
+            color: $color-primary;
+        }
+    }
+}

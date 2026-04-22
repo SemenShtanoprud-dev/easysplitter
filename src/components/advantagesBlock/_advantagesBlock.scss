@@ -1,0 +1,66 @@
+@use "../../scss/base/vars" as *;
+
+.advantages-block {
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+    flex: 1 1 200px;
+    padding: $space-lg;
+    border-radius: 12px;
+    box-shadow: $shadow-sm;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $shadow-md;
+    }
+
+    &__icon {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        flex-shrink: 0;
+
+        svg {
+            width: 24px;
+            height: 24px;
+            color: $color-primary;
+        }
+    }
+
+    &__title {
+        font-size: $fs-h3;
+        font-weight: 600;
+        line-height: $lh-tight;
+        color: $color-text-main;
+    }
+
+    &__description {
+        font-size: $fs-text;
+        line-height: $lh-normal;
+        color: $color-text-secondary;
+        flex-grow: 1;
+    }
+
+    &__link {
+        font-size: $fs-small;
+        font-weight: 600;
+        color: $color-primary;
+        display: inline-flex;
+        align-items: center;
+        gap: $space-xxs;
+        transition: color 0.2s ease;
+        max-width: max-content;
+
+        &::after {
+            content: "→";
+        }
+
+        &:hover {
+            color: $color-primary-hover;
+        }
+    }
+}

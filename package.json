@@ -1,0 +1,29 @@
+{
+  "name": "landing-gulp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "gulp --gulpfile gulpfile.mjs",
+    "build": "gulp build --gulpfile gulpfile.mjs",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "browser-sync": "^3.0.4",
+    "cssnano": "^7.1.1",
+    "del": "^8.0.1",
+    "gh-pages": "^6.3.0",
+    "gulp": "^5.0.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^9.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "postcss": "^8.5.6",
+    "sass": "^1.93.2"
+  }
+}

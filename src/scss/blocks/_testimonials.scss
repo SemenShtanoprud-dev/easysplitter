@@ -1,0 +1,145 @@
+@use "../base/vars" as *;
+
+.testimonials {
+    background: $section-bg;
+
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    &__slide {
+        display: flex;
+        align-items: center;
+        gap: $space-xxl;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: $space-lg;
+        }
+    }
+
+    &__photo-wrap {
+        position: relative;
+        flex-shrink: 0;
+        width: 50%;
+        border-radius: 20px;
+        overflow: hidden;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    &__photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    &__author {
+        position: absolute;
+        bottom: $space-sm;
+        right: $space-sm;
+        background: $color-white;
+        border-radius: 10px;
+        padding: $space-xs $space-sm;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        box-shadow: $shadow-sm;
+
+        &-name {
+            font-size: $fs-small;
+            font-weight: 700;
+            color: $color-text-main;
+        }
+
+        &-role {
+            font-size: $fs-small;
+            color: $color-text-secondary;
+            opacity: 0.6;
+        }
+    }
+
+    &__body {
+        flex: 1;
+    }
+
+    &__title {
+        font-size: $fs-h2;
+        font-weight: 700;
+        color: $color-text-main;
+        margin-bottom: $space-md;
+
+        &::after {
+            content: "";
+            display: block;
+            margin-top: $space-xs;
+            width: 60px;
+            height: 5px;
+            border-radius: 10px;
+            background: $gradient-main;
+        }
+    }
+
+    &__quote {
+        font-size: $fs-text;
+        line-height: $lh-loose;
+        color: $color-text-secondary;
+        font-style: italic;
+        margin-bottom: $space-lg;
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        gap: $space-lg;
+        margin-top: $space-lg;
+        justify-content: center;
+    }
+
+    &__nav {
+        display: flex;
+        gap: $space-xs;
+    }
+
+    &__btn {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        border: 1.5px solid $color-border;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: $color-text-main;
+        transition: border-color 0.2s, color 0.2s;
+
+        &:hover {
+            border-color: $color-primary;
+            color: $color-primary;
+        }
+    }
+
+    &__pagination {
+        display: flex;
+        gap: $space-xs;
+        align-items: center;
+
+        .swiper-pagination-bullet {
+            width: 32px;
+            height: 4px;
+            border-radius: 4px;
+            background: $color-border;
+            opacity: 1;
+            transition: background 0.2s;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: $gradient-main;
+        }
+    }
+}

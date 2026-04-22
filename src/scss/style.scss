@@ -1,0 +1,17 @@
+@use "./base/reset";
+@use "./base/vars";
+@use "./base/global";
+
+@use "./blocks/header";
+@use "./blocks/hero";
+@use "./blocks/advantages";
+@use "./blocks/preferences";
+@use "./blocks/steps";
+@use "./blocks/banner";
+@use "./blocks/testimonials";
+@use "./blocks/buttons";
+@use "./blocks/footer";
+
+@use "../components/advantagesBlock/advantagesBlock";
+@use "../components/preferencesBlock/preferencesBlock";
+@use "../components/stepsBlock/stepsBlock";

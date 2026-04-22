@@ -1,0 +1,53 @@
+@use "../base/vars" as *;
+
+.hero {
+    padding: $space-xxxl 0;
+    text-align: center;
+    background: $gradient-main;
+    overflow: hidden;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        font-size: $fs-hero;
+        line-height: $lh-tight;
+        font-weight: 600;
+        color: $color-white;
+        max-width: 1050px;
+
+        @media (max-width: 768px) {
+            font-size: $fs-h1;
+        }
+    }
+
+    &__text {
+        margin-top: $space-md;
+        font-size: $fs-text-lg;
+        line-height: $lh-normal;
+        color: $color-white;
+        max-width: 900px;
+    }
+
+    &__actions {
+        margin-top: $space-lg;
+        display: flex;
+        gap: $space-md;
+    }
+
+    &__picture {
+        margin-top: $space-xl;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}

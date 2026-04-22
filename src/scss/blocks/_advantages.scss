@@ -1,0 +1,42 @@
+@use "../base/vars" as *;
+
+.advantages {
+    background: $section-bg;
+
+    &__title {
+        font-size: $fs-h2;
+        color: $color-text-secondary;
+        margin-bottom: $space-md;
+        text-align: center;
+
+        &::after {
+            content: "";
+            display: block;
+            margin-top: $space-xs;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60px;
+            height: 5px;
+            border-radius: 10px;
+            background: $gradient-main;
+        }
+    }
+
+    &__text {
+        font-size: $fs-text-lg;
+        color: $color-text-secondary;
+        max-width: 800px;
+        margin: 0 auto $space-xl;
+        text-align: center;
+    }
+
+    &__blocks {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $space-lg;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+}
